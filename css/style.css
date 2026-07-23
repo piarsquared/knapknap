@@ -1,0 +1,31 @@
+body{
+
+    background-color: #181926;
+
+}
+
+.grid{
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: 
+        linear-gradient(to right, #ee99a0 3px, transparent 2px), /** vertical lines **/
+        linear-gradient(to bottom, #ee99a0 3px, transparent 2px); /** horizontal lines **/
+    
+    background-size: 75px 75px;
+    animation: moveGrid 2s linear infinite;
+
+} /** finally got it working, just not gonna tinker with it anymore. **/
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px -75px;
+  }
+}
