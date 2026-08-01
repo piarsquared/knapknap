@@ -6,4 +6,4 @@ let showingAlternate = false;
 setInterval(() => {
     document.title = showingAlternate ? originalTitle : alternateTitle;
     showingAlternate = !showingAlternate;
-}, 2500);
+}, 3000);
