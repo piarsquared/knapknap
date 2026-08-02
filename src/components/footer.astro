@@ -1,0 +1,51 @@
+---
+const year = new Date().getFullYear(); /* w astro :pray: */
+console.log("The year is: " + year)
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; {year} piarsquared</p>
+    <div class="footer-links">
+      <a href="https://github.com/piarsquared" target="_blank" rel="noopener">GitHub</a> <!-- TODO: Perhaps change this text to images in the future? -->
+      <a href="https://youtube.com/@piartech" target="_blank" rel="noopener">YouTube</a> <!-- images should be 25px in height, width is variable. -->
+      <a href="https://catppuccin.com/palette/" target="_blank">Catppuccin</a> <!-- NTS: Could use rem to define this automatically. -->
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid var(--ctp-surface0);
+    background: var(--ctp-mantle);
+  }
+
+  .footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--ctp-subtext);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer-links a {
+    color: var(--ctp-subtext);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--ctp-mauve);
+    transition: color 0.2s ease;
+  }
+</style>

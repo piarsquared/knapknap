@@ -1,0 +1,42 @@
+/** colors are from https://catppuccin.com/palette/ **/
+
+:root {
+  --ctp-rosewater: #f2d5cf;
+  --ctp-flamingo: #eebebe;
+  --ctp-pink: #f4b8e4;
+  --ctp-mauve: #ca9ee6;
+  --ctp-red: #ed8796;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  
+  --ctp-text: #cdd6f4;
+  --ctp-subtext: #bac2de;
+  --ctp-overlay: #9399b2;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+}
+
+body {
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.highlight {
+  color: var(--ctp-mauve);
+}
+
+/** idea: maybe add highlight hovering? **/

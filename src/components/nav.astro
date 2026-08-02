@@ -1,0 +1,72 @@
+---
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
+];
+---
+
+<header class="navbar">
+  <div class="nav-container">
+    <i><a href="/" class="logo">piar<span class="dot">.</span></a></i>
+    <nav>
+      <ul class="nav-links">
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Just going to use internal CSS -->
+
+<style> 
+  .navbar {
+    width: 100%;
+    border-bottom: 1px solid var(--ctp-surface0);
+    background: var(--ctp-mantle);
+  }
+
+  .nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--ctp-text);
+    text-decoration: none;
+  }
+
+  .dot {
+    color: var(--ctp-mauve);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: var(--ctp-subtext);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--ctp-mauve);
+  }
+</style>

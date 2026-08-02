@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/nav.astro";
+import Footer from "../components/footer.astro"; /* NTS: component imports MUST be capital */
 
 interface Props {
     title: string;
@@ -17,19 +19,35 @@ const {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>{title}</title>
-
     <meta name="description" content={description} />
-
     <link rel="icon" href="/favicon.ico" />
 </head>
 
-<body>
+<body class="layout-wrapper">
 
-    <slot />
+    <Navbar/>
+    
+    <div class="content">
+        <slot />
+    </div>
 
-    <script is:inline src="../scripts/title.js"></script>
+    <Footer/>
 
+    <script is:inline src="/src/scripts/title.js"></script>
 </body>
 </html>
+
+<style>
+
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1; /* same as display: flex anyway */
+  }
+
+</style>
