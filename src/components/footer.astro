@@ -15,22 +15,26 @@ console.log("The year is: " + year)
 </footer>
 
 <style>
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
   .footer {
     width: 100%;
-    margin-top: auto;
-    border-top: 1px solid var(--ctp-surface0);
+    border-top: 2px solid var(--ctp-surface0);
     background: var(--ctp-mantle);
   }
 
   .footer-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem;
+    width: 100%;
+    height: 60px;
+    padding: 0 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.85rem;
-    color: var(--ctp-subtext);
   }
 
   .footer-links {
