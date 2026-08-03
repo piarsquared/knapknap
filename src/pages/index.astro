@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/layout.astro";
 
-import { getCollection } from 'astro:content';
+import { getCollection } from 'astro:content'; // from documentation: getCollection() fetches an entire collection and returns an array of entries
 
 const allPosts = await getCollection('posts');
 
