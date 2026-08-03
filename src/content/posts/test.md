@@ -5,7 +5,7 @@ description: "This is mostly a test, lets see how it goes."
 tags: ["astro", "webdev", "catppuccin"]
 ---
 
-# Building My Site with Astro
+# I'm Building My Site With Astro :D
 
 Hello, if you're reading this that means I'm not entirely stupid. Yet, anyway. I managed to get markdown working! Hey, that's pretty cool, right?
 

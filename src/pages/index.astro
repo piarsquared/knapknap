@@ -26,17 +26,6 @@ const latestPost = sortedPosts[0];
       </p>
     </section>
 
-    <section class="recent-posts">
-      <h2>recent posts</h2>
-      <ul>
-        {latestPost && (
-        <li class="post-preview">
-          <a href={`/blog/${latestPost.id}`}>{latestPost.data.title}</a>
-        </li>
-        )}
-      </ul>
-    </section>
-
     <section class="now">
       <h2>what i'm up to</h2>
 
@@ -45,6 +34,17 @@ const latestPost = sortedPosts[0];
         <li>systems programming</li>
         <li>linux/wii tinkerer</li>
         <li>youtuber</li>
+      </ul>
+    </section>
+
+    <section class="recent-posts">
+      <h2>recent posts</h2>
+      <ul>
+        {latestPost && (
+        <li class="post-preview">
+          <a href={`/blog/${latestPost.id}`}>{latestPost.data.title}</a>
+        </li>
+        )}
       </ul>
     </section>
 
