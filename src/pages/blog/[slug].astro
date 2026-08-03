@@ -23,10 +23,10 @@ const { Content } = await render(post);
 
   <article class="container">
     <h1>{post.data.title}</h1>
-
-    <p class="date">
-      {post.data.date}
-    </p>
+    
+    <time class="date" datetime={post.data.date.toISOString()}>
+        {post.data.date.toISOString().split("T")[0]} <!-- this turns a date into a string (toISOString) -->
+    </time>
 
     <Content />
   </article>
