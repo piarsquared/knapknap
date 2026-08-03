@@ -1,23 +1,69 @@
 ---
 import Layout from "../layouts/layout.astro";
+
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const latestPost = sortedPosts[0];
 ---
 
 <Layout title="home" description="Personal portfolio and blog">
 
-    <navbar></navbar>
+  <navbar/>
 
   <main class="container">
 
     <section class="hero">
+      <h1>hi, i'm <span class="highlight">piar</span></h1>
 
-      <h1>hi, i'm <span class="highlight">piar</span></h1> <!-- todo: make piar have different styling -->
-      
       <p class="bio">
-        <i>software, tinkering, systems</i>
+        software • systems • linux • wii
       </p>
-
     </section>
 
-   </main>
+    <section class="recent-posts">
+      <h2>recent posts</h2>
+      <ul>
+        {latestPost && (
+        <li class="post-preview">
+          <a href={`/blog/${latestPost.id}`}>{latestPost.data.title}</a>
+        </li>
+        )}
+      </ul>
+    </section>
+
+    <section class="now">
+      <h2>what i'm up to</h2>
+
+      <ul>
+        <li>c++, python software developer</li>
+        <li>systems programming</li>
+        <li>linux/wii tinkerer</li>
+        <li>youtuber</li>
+      </ul>
+    </section>
+
+    <section class="contact-cta">
+      <h2>contact me</h2>
+
+      <p>if you need to reach out you can do so through:</p>
+
+      <ul>
+        <li>
+          <a href="mailto:contact.piarsquared@gmail.com">
+            contact.piarsquared@gmail.com
+          </a>
+        </li>
+        <li>discord server</li>
+        <li>youtube</li>
+      </ul>
+    </section>
+
+  </main>
 
 </Layout>
