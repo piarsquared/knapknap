@@ -9,7 +9,9 @@ const sortedPosts = allPosts.sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 
-const latestPost = sortedPosts[0];
+// const latestPost = sortedPosts[0];
+const latestPost = sortedPosts.slice(0, 3); // i wanna display 3 most recent instead
+
 ---
 
 <Layout title="home" description="Personal portfolio and blog">
@@ -40,11 +42,11 @@ const latestPost = sortedPosts[0];
     <section class="recent-posts">
       <h2>recent posts</h2>
       <ul>
-        {latestPost && (
+        {latestPost.map((post) => (
         <li class="post-preview">
-          <a href={`/blog/${latestPost.id}`}>{latestPost.data.title}</a>
+          <a href={`/blog/${post.id}`}>{post.data.title}</a>
         </li>
-        )}
+      ))}
       </ul>
     </section>
 
