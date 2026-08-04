@@ -1,17 +1,17 @@
 ---
-title: "Sample blog post / Hi everyone"
-date: "2026-08-02"
-description: "This is mostly a test, lets see how it goes."
+title: "Hi everyone"
+date: "2026-08-03"
+description: "First blog post, let's see what happens."
 tags: ["astro", "webdev", "catppuccin"]
 ---
 
-# I'm Building My Site With Astro :D
+# Welcome everyone
 
 Hello, if you're reading this that means I'm not entirely stupid. Yet, anyway. I managed to get markdown working! Hey, that's pretty cool, right?
 
 ## Code Example (For Testing)
 
-Here is a quick snippet in C++:
+Here is a quick code snippet in C++:
 
 ```cpp
 #include <iostream>
