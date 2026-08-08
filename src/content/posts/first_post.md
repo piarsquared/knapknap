@@ -1,6 +1,6 @@
 ---
 title: "Hi everyone"
-date: "2026-08-03"
+date: "2026-08-2"
 description: "First blog post, let's see what happens."
 tags: ["astro", "webdev", "catppuccin"]
 ---
