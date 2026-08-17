@@ -87,7 +87,37 @@ body {
 }
 
 .highlight {
-  color: var(--ctp-mauve);
+  
+  background: linear-gradient(
+    135deg,
+    var(--ctp-mauve) 0%,
+    var(--ctp-blue) 100%
+  );
+
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* switches to foreground fill ? */
+
+  animation: shift-color 2s ease infinite alternate;
+
+  transition: filter 0.3s ease;
+
 }
 
-/** idea: maybe add highlight hovering? **/
+/* idea: maybe add highlight hovering? */
+
+.highlight:hover {
+  filter: drop-shadow(0 0 8px rgba(202, 158, 230, 0.45));
+
+}
+
+/* i gotchu bro */
+
+@keyframes shift-color {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

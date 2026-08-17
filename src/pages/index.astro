@@ -16,8 +16,6 @@ const latestPost = sortedPosts.slice(0, 3); // i wanna display 3 most recent ins
 
 <Layout title="home" description="Personal portfolio and blog">
 
-  <navbar/>
-
   <main class="container">
 
     <section class="hero">
@@ -28,19 +26,45 @@ const latestPost = sortedPosts.slice(0, 3); // i wanna display 3 most recent ins
       </p>
     </section>
 
-    <section class="now">
+    <div class="content-box">
+
+    <section class="section-block now-section">
       <h2>what i'm up to</h2>
 
-      <ul>
-        <li>c++, python software developer</li>
-        <li>systems programming</li>
-        <li>linux/wii tinkerer</li>
-        <li>youtuber</li>
-      </ul>
+      <br>
+
+      <div class="now-grid">
+        <div class="now-card">
+          <h3>development</h3>
+          <div class="push-over"><p>writing c++ & python for systems and software</p></div>
+        </div>
+
+        <br>
+
+        <div class="now-card">
+          <h3>tinkering</h3>
+          <div class="push-over"><p>customizing linux environments and working with wii homebrew development</p></div>
+        </div>
+
+        <br>
+
+        <div class="now-card">
+          <h3>content</h3>
+          <div class="push-over"><p>creating youtube videos about software and tech</p></div>
+        </div>
+      </div>
+
     </section>
+
+    </div>
+
+    <div class="content-box">
 
     <section class="recent-posts">
       <h2>recent posts</h2>
+
+      <div class="push-over"><a href="/blog" class="view-all">view all posts →</a></div>
+
       <ul>
         {latestPost.map((post) => (
         <li class="post-preview">
@@ -59,6 +83,10 @@ const latestPost = sortedPosts.slice(0, 3); // i wanna display 3 most recent ins
       ))}
       </ul>
     </section>
+
+    </div>
+
+    <div class="content-box">
 
     <section class="contact-cta">
       <h2>contact me</h2>
@@ -83,19 +111,32 @@ const latestPost = sortedPosts.slice(0, 3); // i wanna display 3 most recent ins
       </ul>
     </section>
 
+    </div>
+
     <style>
 
-    ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
+  .recent-posts li {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-  }
+  } /* fixed some minor scope issues here. */
+
+  .content-box {
     
+    background-color: var(--ctp-mantle);
+    border: 1px solid var(--ctp-flamingo);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 3rem;
+
+  }
+
+  .push-over /* amazing naming scheme */{
+
+    margin-left: 2rem;
+
+  }
+
 </style>
 
   </main>
